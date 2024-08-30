@@ -15,7 +15,6 @@ This repository contains the code and models for the paper ["Gaussian Adaptive A
 - [Results](#results)
 - [Notes](#notes)
 - [References](#references)
-- [License](#license)
 
 ## Credit
 
