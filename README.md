@@ -131,7 +131,3 @@ Please refer to the original papers for more detailed explanations and methodolo
 
 - Bailey, A., et al. (2021). Gender Bias in Depression Detection Using Audio Features. *EUSIPCO 2021*. [arXiv:2010.15120](https://arxiv.org/abs/2010.15120)
 - Ioannides, G., et al. (2024). Gaussian Adaptive Attention-based Speech Network: Enhancing Feature Understanding for Mental Health Disorders. *IEEE Transactions on Affective Computing*. [arXiv:2024.XXXXXX](https://arxiv.org/abs/2024.XXXXXX)
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
