@@ -645,7 +645,7 @@ class CustomAttentionTransformer(nn.Module):
         self.nhead = nhead
 
         # Custom attention mechanism
-        self.custom_attention = GaussianBlock(norm_axes=[1], num_heads=[nhead], num_gaussians=[24], num_layers=1, padding_value=None, eps=1e-8)
+        self.custom_attention = GaussianBlock(norm_axes=[1], num_heads=[nhead], num_gaussians=[16], num_layers=1, padding_value=None, eps=1e-8)
 
         # Transformer encoder layers
         encoder_layers = TransformerEncoderLayer(d_model=d_model, nhead=nhead, dim_feedforward=dim_feedforward, dropout=dropout)
@@ -678,7 +678,7 @@ class CustomMel7(nn.Module):
         super(CustomMel7, self).__init__()
         # Add the first Gaussian Adaptive Attention block here
         self.attention1 = GaussianBlock(norm_axes=[1], num_heads=[4], num_gaussians=[24], num_layers=1, padding_value=None, eps=1e-8)
-        self.conv = ConvBlock1d(in_channels=400,
+        self.conv = ConvBlock1d(in_channels=40,  # Adjust input channels to 40
                                 out_channels=128,
                                 kernel=3,
                                 stride=1,
@@ -693,7 +693,7 @@ class CustomMel7(nn.Module):
                             num_layers=2,
                             batch_first=True,
                             bidirectional=False)
-        self.fc = FullyConnected(in_channels=128,  # Adjust the in_channels if necessary
+        self.fc = FullyConnected(in_channels=128,
                                  out_channels=1,
                                  activation='sigmoid',
                                  normalisation=None)
