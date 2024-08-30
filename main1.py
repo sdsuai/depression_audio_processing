@@ -477,6 +477,7 @@ def create_model():
         model: obj - The model to be used for training during experiment
     """
     if config.EXPERIMENT_DETAILS['FEATURE_EXP'] == 'mel':
+        #model = CustomMel()
         model = CustomAttentionTransformer(d_model=120, nhead=4, num_encoder_layers=2, dim_feedforward=2048, dropout=0.1)
     elif config.EXPERIMENT_DETAILS['FEATURE_EXP'] == 'raw':
         model = CustomRaw()
